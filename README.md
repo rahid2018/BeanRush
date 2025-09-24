@@ -1,2 +1,2 @@
 # BeanRush
-Responsive Coffee Ordering Website
+Responsive Coffee & Desserts Ordering Website
