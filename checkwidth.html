@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Check Browser Width</title>
+</head>
+<body>
+  <h2 id="width"></h2>
+
+  <script>
+    function updateWidth() {
+      document.getElementById("width").innerText = "Browser viewport width: " + window.innerWidth + "px";
+    }
+
+    // Call on load
+    updateWidth();
+
+    // Update if window is resized
+    window.onresize = updateWidth;
+  </script>
+</body>
+</html>

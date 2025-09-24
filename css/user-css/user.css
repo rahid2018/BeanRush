@@ -1,0 +1,132 @@
+/* icon group styling inside navbar */
+.icon-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.icon-group .icon-link {
+    color: var(--white-color);
+    font-size: var(--font-size-l);
+    transition: 0.3s ease;
+}
+
+.icon-group .icon-link:hover {
+    color: var(--secondary-color);
+}
+
+/* User Dropdown Styles */
+.user-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.user-icon {
+    cursor: pointer;
+    color: var(--white-color);
+    font-size: var(--font-size-l);
+    transition: 0.3s ease;
+}
+
+.user-icon:hover {
+    color: var(--secondary-color);
+}
+
+.dropdown-menu {
+
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: var(--white-color);
+    border-radius: var(--border-radius-s);
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    display: none;
+    flex-direction: column;
+    min-width: 180px;
+    z-index: 99;
+}
+
+
+.auth-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.dropdown-btn {
+    padding: 6px 10px;
+    background: var(--secondary-color);
+    color: var(--white-color);
+    border-radius: var(--border-radius-s);
+    font-size: var(--font-size-s);
+    transition: 0.3s ease;
+}
+
+.dropdown-btn:hover {
+    background: var(--primary-color);
+}
+
+.logout-btn {
+    padding: 6px 10px;
+    width: 100%;
+    background: var(--primary-color);
+    color: var(--white-color);
+    border-radius: var(--border-radius-s);
+    font-size: var(--font-size-s);
+    transition: 0.3s ease;
+    border: none;
+    cursor: pointer;
+}
+
+.logout-btn:hover {
+    background: var(--secondary-color);
+}
+
+@media screen and (max-width: 1024px) {
+
+    /* user icon */
+    .user-icon-dropdown {
+    display: block; /* ensure it's not hidden */
+  }
+
+  .user-options a {
+    color: var(--primary-color); /* Adjust color to match theme */
+    text-decoration: none;
+  }
+}
+
+@media screen and (max-width: 900px) {
+    :root {
+        --font-size-m: 1rem;
+        --font-size-l: 1.3rem;
+        --font-size-xl: 1.5rem;
+        --font-size-xxl: 1.8rem;
+    }
+
+    body.show-mobile-menu header::before {
+        content: "";
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        backdrop-filter: blur(5px);
+        background: rgba(0, 0, 0, 0.2);
+        /* transition: 0.3s ease; */
+    }
+/* this is for user icons */
+    .icon-group {
+        margin-top: 10px;
+    }
+
+    .dropdown-menu {
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* and ends here */
+    
+}

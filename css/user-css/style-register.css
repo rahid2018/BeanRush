@@ -1,0 +1,195 @@
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,100;0,400;0,600;1,300;1,400;1,500;1,700&display=swap');
+
+:root {
+    /* colors */
+    --white-color: #fff;
+    --dark-color: #252525;
+    --primary-color: #3b141c;
+    --secondary-color: #f3961c;
+    --light-pink-color: #faf4f5;
+    --medium-gray-color: #ccc;
+
+    /* font size */
+    --font-size-s: 0.9rem;
+    --font-size-n: 1rem;
+    --font-size-m: 1.12rem;
+    --font-size-l: 1.5rem;
+    --font-size-xl: 2rem;
+    --font-size-xxl: 2.3rem;
+
+    /* font weight */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+
+    /* font radius */
+    --border-radius-s: 8px;
+    --border-radius-m: 30px;
+    --border-radius-circle: 50%;
+
+    /* site max width */
+    --site-max-width: 1300px;
+}
+
+.register-section {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: var(--primary-color);
+    padding: 30px 15px;
+    color: var(--white-color);
+}
+
+/* .register-logo {
+    max-width: 300px;
+    margin: 70px auto;
+    left: 0;
+    border-radius: 10px;
+    box-shadow: 2px 2px 25px 5px #681828;
+    cursor: pointer;
+    transform: translateX(100%);
+    animation: slide 1.2s ease-out forwards;
+    overflow-x: hidden;
+} */
+
+.register-title {
+    text-align: center;
+    width: 20%;
+    font-size: var(--font-size-xxl);
+    color: var(--secondary-color);
+    margin: 70px auto 5px;
+    /* font-family: "Miniver", sans-serif; */
+    text-transform: uppercase;
+    letter-spacing: 3;
+}
+
+.register-subtitle {
+    font-size: var(--font-size-m);
+    max-width: 70%;
+    font-weight: var(--font-weight-semibold);
+    text-align: center;
+    margin: 0 auto 5px;
+}
+
+.register-form {
+    border: 4px solid var(--dark-color);
+    background: var(--dark-color);
+    color: var(--black-color);
+    padding: 30px 25px;
+    width: 100%;
+    margin: 10px auto;
+    max-width: 500px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 1);/*horizontal vertical blur and spread */
+    opacity: 0;
+    transform: translateX(100%);
+    animation: slide 1.4s ease-out forwards;
+    overflow-x: hidden;
+}
+
+.menu-details {
+    margin-bottom: 15px;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.menu-details p.text {
+    font-size: var(--font-size-m);
+    margin-bottom: 6px;
+    padding-left: 10px;
+}
+
+.register-form input[type="text"],/*for registration*/
+.register-form input[type="email"],
+.register-form input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius-s);
+    color: var(--white-color);
+    font-size: var(--font-size-n);
+    transition: all 0.3s ease;
+}
+
+.register-form input[type="text"],/*for registration*/
+.register-form input[type="email"],
+.register-form input[type="password"]:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+    background: var(--primary-color);
+}
+
+.register-form input[type="submit"] {
+    display: block;
+    cursor: pointer;
+    margin: 20px auto;
+    width: 50%;
+    padding: 10px 26px;
+    color: var(--primary-color);
+    background: var(--secondary-color);
+    border-radius: var(--border-radius-m);
+    font-weight: var(--font-weight-medium);
+    border: none;
+    transition: 0.3s ease;
+}
+
+.register-form input[type="submit"]:hover {
+    color: var(--white-color);
+    background: transparent;
+    border: 2px solid var(--white-color);
+}
+
+
+.register-form p.text a {
+    border-radius: 40px;
+    padding: 7px;
+    color: blue;
+    /* text-decoration: underline; */
+    margin-left: 20px;
+}
+
+.register-form p.text a:hover{
+    background: var(--secondary-color);
+    color: var(--white-color);
+    /* border: 1px solid var(--white-color); */
+}
+
+/* ========== Responsive ========== */
+
+@media screen and (max-width: 640px) {
+    /* .register-logo {
+        max-width: 200px;
+    } */
+
+    .register-title {
+        margin-top: 40px;
+        width: 100%;
+        font-size: var(--font-size-xl);
+    }
+
+    .register-subtitle {
+        font-size: var(--font-size-m);
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .register-form {
+        padding: 25px 20px;
+        max-width: 90%;
+    }
+
+    /* .register-logo {
+        max-width: 250px;
+    } */
+}
+
+@media screen and (max-width: 1024px) {
+    .register-title{
+        margin-top: 100px;
+        width: 100%;
+    }
+    .register-form {
+        max-width: 400px;
+    }
+
+}

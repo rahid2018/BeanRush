@@ -1,0 +1,40 @@
+my website contains following pages:-
+index.php (navbar: home orders about products account, and hero section , about section, menu section, footer, testimonials, gallery, contact us, and browse menu button)
+
+menu.php (what we serve images and with button dive in)
+
+products.php (products with images price add to cart button view cart button and names)
+
+cart.php (cart items which were selected in products.php quantity button update button remove button delete all product button proceed to checkout button)
+
+checkout.php (form filing place order button total amount and cart products with details select payment method button with confirmation, and back to previous button in all pages)
+
+confirmation.php (shows order confirmed and with product details and contains back to shopping and my orders button to check ordered items)
+
+orders.php (shows ordered products with details like address amount method of payment, and payment status and also cancel button option to cancel orders which are in progress not shipped or delivered)
+register.php (user details form like name email phone and password after redirects to login page)
+login.php (email, password if matches then redirects to page where login was initiated)
+and remember that login redirects to the page where it was initiated like cart checkout and products or home and without login products can't be added to cart means login starts from add to cart button or check cart
+footer.php (contact info, quick links, our menu, privacy policy t&c, refund policy and also admin login)
+
+Admin section
+login.php (only for admin and in my website there is only one admin so data is already stored in database)
+admin.php/home page (overview of sales today, todays orders, pending orders, recent orders, total products, registered customers, popular products, sales trend)
+products.php (filter products based on search category status, add products, product details, delate products, update products)
+orders.php (filter based on search customer name, order status, order date, order id, update, delate, status check, details all orders)
+users.php (filter users based on search, status, email, phone no, add user, delete user, update user, status check(inactive, active, suspended etc))
+reports.php (filter reports based on start to end date, total sales, total orders, average order value, daily sales trends, top categories, top products)
+categories.php (filters based on search status, add category, delete category, update category etc)
+admin profile (admin details, update admin details, change password all other pages overview, activity log, etc)
+
+remember that user pages also shows user details after login i.e dropdown profile button in navbar and contains logout button both admin and user
+
+Database tables
+admin table: only admin details are stored like name id email phone password
+cart table: id user_id product_id price qty created_at
+orders table: id group_id, user_id, name, number, email, address, address_type, method, payment_details, payment_confirmed, payment_id, price, qty, date, status
+products table: id title name category price stock status image
+users table: id name email phone status password  this is the full overview of my website make plantuml codes and let me know if there is any adjustment or advanced feature or something else required  
+
+
+hey i need code for plantuml to draw uml diagrams for my website (DFD all levels, deployment, activity, ERD, Class diagram, Object diagram, use case diagram, sequence diagram ) wait i will share my code and delivery tracking is there in orders.php for user

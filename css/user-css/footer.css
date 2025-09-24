@@ -1,0 +1,177 @@
+/* footer.css - Footer specific styles */
+
+/* ======== Footer styling ============ */
+footer {
+    background: var(--primary-color);
+    color: var(--white-color);
+    padding: 70px 0 30px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 50px;
+    justify-content: space-between;
+}
+
+.footer-column {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-logo {
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-bold);
+    margin-bottom: 20px;
+    color: var(--white-color);
+}
+
+.footer-description {
+    margin-bottom: 25px;
+    line-height: 1.8;
+    font-size: var(--font-size-s);
+}
+
+.footer-title {
+    font-size: var(--font-size-l);
+    margin-bottom: 25px;
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.footer-title::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 50px;
+    height: 2px;
+    background: var(--secondary-color);
+}
+
+.footer-links li {
+    margin-bottom: 15px;
+}
+
+.footer-links a {
+    color: var(--white-color);
+    text-decoration: none;
+    transition: 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.footer-links a:hover {
+    color: var(--secondary-color);
+    transform: translateX(5px);
+}
+
+.footer-links i {
+    color: var(--secondary-color);
+}
+
+.footer-contact li {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.footer-contact i {
+    color: var(--secondary-color);
+    font-size: var(--font-size-m);
+    margin-top: 5px;
+}
+
+.footer-contact span {
+    flex: 1;
+}
+
+.footer-bottom {
+    position: relative;
+    margin-top: 60px;
+    text-align: center;
+    padding-top: 30px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    font-size: var(--font-size-s);
+}
+
+footer .privacy {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+    width: 70%;
+    margin: 10px auto;
+    justify-content: center;
+}
+
+footer .privacy a {
+    padding: 5px;
+    text-align: center;
+    color: var(--white-color);
+    font-weight: var(--border-radius-s);
+    font-size: var(--font-size-s);
+    color: var(--white-color);
+    transition: all 0.7s ease;
+}
+
+footer .privacy a:hover {
+    border: 1px solid var(--secondary-color);
+    border-radius: 40px;
+    background: var(--dark-color);
+}
+
+footer .privacy .fas {
+    color: var(--secondary-color);
+    margin-right: 3px;
+}
+
+footer .social-links {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+footer .social-links a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: var(--border-radius-circle);
+    background: rgba(255,255,255,0.1);
+    color: var(--white-color);
+    transition: 0.3s ease;
+}
+
+footer .social-links a:hover {
+    background: var(--secondary-color);
+    transform: translateY(-5px);
+}
+
+/* Responsive styles for footer */
+@media screen and (max-width: 1024px) {
+    footer .privacy {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    footer .privacy {
+        width: 80%;
+    }
+    
+    footer .privacy a {
+        font-size: 10px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    footer .privacy {
+        width: 100%;
+    }
+    
+    footer .privacy a {
+        font-size: 10px;
+    }
+}
